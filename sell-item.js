@@ -32,8 +32,8 @@ class SellItem extends HTMLElement {
 
     const priceInformation = document.createElement('div');
     const prices = document.createElement('div');
-    const price = document.createElement('p');
     const discountedPrice = document.createElement('p');
+    const price = document.createElement('p');
     const discount = document.createElement('p');
 
     container.classList.add('container');
@@ -46,11 +46,11 @@ class SellItem extends HTMLElement {
 
     priceInformation.classList.add('price-info');
     prices.classList.add('prices');
-    discountedPrice.classList.add('discounted-price');
+    price.classList.add('price');
 
     let imageUrl;
-    if (this.getAttribute('image-url')) {
-      imageUrl = this.getAttribute('image-url');
+    if (this.getAttribute('img-url')) {
+      imageUrl = this.getAttribute('img-url');
     } else {
       imageUrl = 'https://via.placeholder.com/300';
     }
@@ -58,21 +58,22 @@ class SellItem extends HTMLElement {
 
     ratingValue.textContent = `Calificación: ${this.getAttribute('rating')}`;
     productTitle.textContent = this.getAttribute('title');
-    price.textContent = `$${this.getAttribute('price')}`;
-    discountedPrice.textContent = `Normal: $${this.getAttribute('discounted-price')}`;
+    discountedPrice.textContent = `$${this.getAttribute('discounted-price')}`;
+    price.textContent = `Normal: $${this.getAttribute('price')}`;
     discount.textContent = `Descuento: ${this.getAttribute('discount')}%`;
 
 
     const style = document.createElement('style');
     style.textContent = `
       .container {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         border: 1px solid black;
         border-radius: 3px;
-        padding: 3%;
         position: relative;
         color: white;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -92,7 +93,7 @@ class SellItem extends HTMLElement {
 
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
         z-index: -1;
       }
 
@@ -134,7 +135,7 @@ class SellItem extends HTMLElement {
         font-weight: bold;
       }
 
-      .discounted-price {
+      .price {
         text-decoration: line-through;
       }
     `
@@ -154,8 +155,8 @@ class SellItem extends HTMLElement {
     description.appendChild(priceInformation);
     priceInformation.appendChild(prices);
     priceInformation.appendChild(discount);
-    prices.appendChild(price);
     prices.appendChild(discountedPrice);
+    prices.appendChild(price);
   }
   disconnectedCallBack() {
     // TODO
