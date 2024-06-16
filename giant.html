@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML + CSS</title>
-    <script src="sell-item.js" defer></script>
+    <script src="sell-item-lit.js" type="module"></script>
   </head>
   <body>
     <nav>
@@ -18,14 +18,13 @@
       </ul>
     </nav>
     <div class="contenedor">
-      <sell-item
-        img-url="pollo.jpg"
-        rating="1"
+      <sell-item-lit
+        imageUrl="pollo.jpg"
+        rating=1
         title="Producto Gigante"
-        price="1000"
-        discounted-price="500"
-        discount="50"
-      ></sell-item>
+        price=5000
+        discount=40
+      ></sell-item-lit>
     </div>
   </body>
   <style>
