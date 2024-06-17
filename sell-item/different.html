@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <script src="sell-item.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="x3.html">x3</a></li>
+        <li><a href="giant.html">Gigante</a></li>
+        <li><a href="different.html">Diferentes</a></li>
+        <li><a href="no-image.html">Sin Atributo Imagen</a></li>
+      </ul>
+    </nav>
+    <div class="contenedor">
+      <sell-item
+        img-url="pollo.jpg"
+        rating="5"
+        title="Producto 1"
+        price="50000"
+        discounted-price="10000"
+        discount="80"
+      ></sell-item>
+      <sell-item
+        img-url="pato.jpg"
+        rating="3"
+        title="Producto 2"
+        price="1000"
+        discounted-price="100"
+        discount="90"
+      ></sell-item>
+    </div>
+  </body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .contenedor {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML + CSS</title>
+    <script src="./sell-item-lit.js" type="module"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="x3.html">x3</a></li>
+        <li><a href="giant.html">Gigante</a></li>
+        <li><a href="different.html">Diferentes</a></li>
+        <li><a href="no-image.html">Sin Atributo Imagen</a></li>
+      </ul>
+    </nav>
+    <div class="contenedor">
+      <sell-item-lit
+        imageUrl="pollo.jpg"
+        rating=1
+        title="Producto Gigante"
+        price=5000
+        discount=40
+      ></sell-item-lit>
+    </div>
+  </body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .contenedor {
+      display: flex;
+      position: relative;
+      top: 50%;
+      left: 25%;
+      height: 500px;
+      width: 500px;
+    }
+  </style>
+</html>
