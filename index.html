@@ -1,56 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HTML + CSS</title>
-    <script src="./sell-item/sell-item-lit.js" type="module"></script>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/sell-item/x3.html">x3</a></li>
-        <li><a href="/sell-item/giant.html">Gigante</a></li>
-        <li><a href="/sell-item/different.html">Diferentes</a></li>
-        <li><a href="/sell-item/no-image.html">Sin Atributo Imagen</a></li>
-      </ul>
-    </nav>
-    <div class="contenedor">
-      <sell-item-lit
-        imageUrl="/sell-item/pollo.jpg"
-        rating=4
-        title="Nombre de Ejemplo"
-        price=1000
-        discount=50
-      ></sell-item-lit>
-    </div>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Todo List</title>
-      <script type="module" src="./todo_list.js"></script>
-      <script type="module" src="./todo_list_lit.js"></script>
-    </head>
-    <body>
-      <div style="display: flex; direction: row; margin: 20px">
-        <todo-list></todo-list>
-        <todo-list-lit></todo-list-lit>
-      </div>
-
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Demo - Web Components</title>
+  <script src="./sell-item/sell-item-lit.js" type="module"></script>
+  <script src="./sell-item/sell-item.js" type="module"></script>
+  <script type="module" src="todo_list/todo_list.js"></script>
+  <script type="module" src="todo_list/todo_list_lit.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #e0e0e0;
       margin: 0;
       padding: 0;
     }
-    .contenedor {
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
       display: flex;
-      height: 100%;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .shop-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .shop {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
   </style>
+</head>
+<body>
+  <header>
+    <h1>Tienda Demo</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/sell-item/x3.html">x3</a>
+      <a href="/sell-item/giant.html">Gigante</a>
+      <a href="/sell-item/different.html">Diferentes</a>
+      <a href="/sell-item/no-image.html">Sin Imagen</a>
+    </nav>
+  </header>
+
+  <div class="shop-container">
+    <h2>Nuestros Productos</h2>
+    <div class="shop">
+      <sell-item-lit
+        imageUrl="/sell-item/pollo.jpg"
+        rating="4"
+        title="Nombre de Ejemplo"
+        price="1000"
+        discount="50"
+      ></sell-item-lit>
+      <sell-item
+        title="Producto Ejemplo 1"
+        price="100.00"
+        discounted-price="80.00"
+        discount="20"
+        rating="4"
+        img-url="sell-item/images/audifonos_1.jpg"
+      ></sell-item>
+      <sell-item
+        title="Producto Ejemplo 2"
+        price="200.00"
+        discounted-price="150.00"
+        discount="25"
+        rating="5"
+        img-url="sell-item/images/audifonos_2.jpeg"
+      ></sell-item>
+      <sell-item
+        title="Producto Ejemplo 3"
+        price="300.00"
+        discounted-price="250.00"
+        discount="15"
+        rating="3"
+        img-url="sell-item/images/audifonos_3.jpeg"
+      ></sell-item>
+      <sell-item
+        title="Producto Ejemplo 4"
+        price="400.00"
+        discounted-price="350.00"
+        discount="10"
+        rating="4"
+        img-url="sell-item/images/audifonos_4.jpeg"
+      ></sell-item>
+    </div>
+  </div>
+
+  <div class="contenedor" style="display: flex; flex-direction: column;">
+    <h2>Todo List</h2>
+    <div style="display: flex; flex-direction: row; gap: 20px; margin: 20px;">
+      <todo-list></todo-list>
+      <todo-list-lit></todo-list-lit>
+    </div>
+  </div>
+</body>
 </html>
