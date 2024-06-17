@@ -30,14 +30,29 @@
       font-size: 1.5em;
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 1em;
+    nav {
+      background-color: #444;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
     }
-
-    nav a:hover {
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
       text-decoration: underline;
     }
 
@@ -69,11 +84,15 @@
   <header>
     <h1>Tienda Demo</h1>
     <nav>
-      <a href="/">Inicio</a>
-      <a href="/sell-item/x3.html">x3</a>
-      <a href="/sell-item/giant.html">Gigante</a>
-      <a href="/sell-item/different.html">Diferentes</a>
-      <a href="/sell-item/no-image.html">Sin Imagen</a>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sell-item/x3.html">x3</a></li>
+        <li><a href="/sell-item/giant.html">Gigante</a></li>
+        <li><a href="/sell-item/different.html">Diferentes</a></li>
+        <li><a href="/sell-item/no-image.html">Sin Imagen</a></li>
+        <li><a href="/todo_list/dark-mode.html">Todo Modo Oscuro</a></li>
+        <li><a href="/todo_list/simple.html">Todo Simple</a></li>
+      </ul>
     </nav>
   </header>
 
