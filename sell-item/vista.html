@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda - Componente SellItem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0e0e0;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .shop-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .shop {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .container {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tienda de Productos</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="shop-container">
+    <h2>Nuestros Productos</h2>
+    <div class="shop">
+      <sell-item 
+        title="Producto Ejemplo 1" 
+        price="100.00" 
+        discounted-price="80.00" 
+        discount="20" 
+        rating="4" 
+        img-url="images/audifonos_1.jpg">
+      </sell-item>
+      <sell-item 
+        title="Producto Ejemplo 2" 
+        price="200.00" 
+        discounted-price="150.00" 
+        discount="25" 
+        rating="5" 
+        img-url="images/audifonos_2.jpeg">
+      </sell-item>
+      <sell-item 
+        title="Producto Ejemplo 3" 
+        price="300.00" 
+        discounted-price="250.00" 
+        discount="15" 
+        rating="3" 
+        img-url="images/audifonos_3.jpeg">
+      </sell-item>
+      <sell-item 
+        title="Producto Ejemplo 4" 
+        price="400.00" 
+        discounted-price="350.00" 
+        discount="10" 
+        rating="4" 
+        img-url="images/audifonos_4.jpeg">
+      </sell-item>
+    </div>
+  </div>
+
+  <script src="sell-item.js"></script>
+</body>
+</html>
