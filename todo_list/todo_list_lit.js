@@ -64,17 +64,20 @@ class TodoListLit extends LitElement {
 
   static properties = {
     tasks: { type: Array },
+    title: { type: String },
+    placeholder: { type: String },
   };
 
   constructor() {
     super();
     this.tasks = [];
+    this.title;
   }
 
   render() {
     return html`
       <div class="todo-container">
-        <h3>ToDo</h3>
+        <h3>${this.title}</h3>
         <ul class="todo-list">
           ${this.tasks.map(
             (task, index) => html`
@@ -90,7 +93,7 @@ class TodoListLit extends LitElement {
             `
           )}
         </ul>
-        <input type="text" class="todo-input" placeholder="Add a new task" />
+        <input type="text" class="todo-input" placeholder=${this.placeholder} />
         <button class="todo-button" @click="${this.addTask}">&plus; Add</button>
       </div>
     `;

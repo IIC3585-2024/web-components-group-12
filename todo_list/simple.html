@@ -1,79 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo List - Simple</title>
-  <script src="todo_list.js" defer></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-    }
-    nav {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      width: 100%;
-      text-align: center;
-    }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    .main-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-      width: 100%;
-    }
-    .container {
-      width: 100%;
-      max-width: 600px;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/sell-item/x3.html">x3</a></li>
-      <li><a href="/sell-item/giant.html">Gigante</a></li>
-      <li><a href="/sell-item/different.html">Diferentes</a></li>
-      <li><a href="/sell-item/no-image.html">Sin Imagen</a></li>
-      <li><a href="/todo_list/dark-mode.html">Todo Modo Oscuro</a></li>
-      <li><a href="/todo_list/simple.html">Todo Simple</a></li>
-    </ul>
-  </nav>
-  <div class="main-content">
-    <div class="container">
-      <todo-list></todo-list>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List - Simple</title>
+    <script src="todo_list.js" defer></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+      }
+      nav {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+      .main-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        width: 100%;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/sell-item/x3.html">x3</a></li>
+        <li><a href="/sell-item/giant.html">Gigante</a></li>
+        <li><a href="/sell-item/different.html">Diferentes</a></li>
+        <li><a href="/sell-item/no-image.html">Sin Imagen</a></li>
+        <li><a href="/todo_list/dark-mode.html">Todo Modo Oscuro</a></li>
+        <li><a href="/todo_list/simple.html">Todo Simple</a></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <div class="container">
+        <todo-list
+          title="ToDo"
+          placeholder="Placeholder"
+          tasks='["Task 1", "Task 2", "Task 3"]'
+        ></todo-list>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
