@@ -22,6 +22,7 @@ Todo lo referente al componente `todo_list` se encuentra en la carpeta `todo_lis
 
 - El componente se llama `<todo-list>` y se puede encontrar dentro del archivo `todo-list.js`.
 - Se utilizo la vista `simple.html` para mostrar el comportamiento del componente con esta tecnología.
+- Se deben declarar los atributos `title`, `placeholder` y `tasks` para que el componente funcione correctamente.
 
 ### Lit
 
